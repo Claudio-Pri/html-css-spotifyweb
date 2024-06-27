@@ -62,6 +62,11 @@ header .top-banner {
     width: calc(100% - 250px);
     margin-left: 250px;
     height: 100px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    text-align: right;
+    line-height: 100px;
+    vertical-align: middle;
     position: fixed;
     top: 0;
     z-index: 1;
@@ -83,6 +88,7 @@ header .top-banner {
 .main-section {
     margin-left: 250px;
     min-height: calc(100vh - 150px);
+    padding-top: 110px;
 
 
 
@@ -146,9 +152,8 @@ header .top-banner {
 
 }
 
-.side-nav .nav-add-playlist li a {
-    display: flex;
-    align-items: center;
+.nav-playlist-container .nav-add-playlist li a {
+
     color: gray;
 
 }
@@ -168,6 +173,8 @@ header .top-banner {
 
 }
 
+
+
 .side-nav .nav-playlist-name a {
     color: grey;
 }
@@ -180,7 +187,7 @@ header .top-banner {
 
 .side-nav .container.row {
     flex-direction: column;
-    max-height: 400px;
+    max-height: 100%;
     overflow-y: auto;
 }
 
@@ -207,33 +214,67 @@ footer .row {
 
 }
 
-footer .row .col-1-3 {
+footer .row .footer {
     padding: 10px;
     height: 150px;
     display: flex;
+    justify-content: flex-start;
     align-items: center;
 
 
 }
 
-footer .row .col-1-3>* {
+footer .row .footer>* {
     margin: 0 10px;
-    /* NON TE LO SCORDARE */
+
+    /* non te lo scordare */
 
 }
 
-footer .row .footer-left img {
-    max-width: 100px;
+footer .row .footer .img-container {
+    width: 100px;
 
 }
 
-footer .row .col-1-3 .button {
+
+footer .row .button {
     display: inline-block;
-    color: white;
+    color: grey;
     background-color: #282828;
-
     margin: 0 10px;
     /* NON TE LO SCORDARE */
+
+}
+
+footer .row .footer-left a {
+    color: gray;
+    text-decoration: none;
+    display: inline-block;
+    padding: 2px 0;
+    ;
+
+}
+
+
+/* EFFECTS */
+
+.side-nav ul li a:hover {
+    color: white;
+
+
+}
+
+.side-nav .nav-playlist-name a:hover {
+    color: white;
+}
+
+footer .row .footer-left a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+footer .row .footer-left .button:hover {
+    color: white;
 
 }
 
@@ -289,10 +330,7 @@ footer .row .col-1-3 .button {
 
 /* DEBUG */
 
-.debug header .top-banner {
 
-    background-color: rgba(0, 66, 10, 0.5);
-}
 
 .debug main {
 

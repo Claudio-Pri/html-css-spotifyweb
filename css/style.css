@@ -73,6 +73,7 @@ img {
     height: var(--lower-height);
     display: flex;
     justify-content: space-between;
+    background-color: #282828;
 }
 
 
@@ -205,12 +206,13 @@ main header>a {
 
 }
 
-#play-bar {
+/* sotto i 570px si scassa */
+/* PLAY BAR?? */
+.play-bar {
     display: flex;
     justify-content: flex-end;
-
     height: 3px;
-    width: 200px;
+    width: 150px;
     background-color: white;
     margin: 0 10px;
 
@@ -218,16 +220,36 @@ main header>a {
 
 }
 
-#play-bar-gray {
+.play-bar-gray {
 
     height: 3px;
     width: 70%;
     background-color: gray;
 
+}
+
+/* /PLAY BAR?? */
+
+
+
+.footer-right {
+    display: flex;
+    align-items: center;
+}
+
+.footer-right>* {
+    margin: 0 10px;
+}
+
+.footer-right .play-bar {
+    width: 70px;
+
 
 
 
 }
+
+
 
 /* RESPONSIVE */
 
@@ -289,13 +311,13 @@ main header>a {
     height: 100px;
 } */
 
-.debug #lower {
+/* .debug #lower {
     background-color: aqua;
 }
 
 .debug #lower>* {
     background-color: orangered;
-}
+} */
 
 /* .debug .col {
     background-color: yellowgreen;

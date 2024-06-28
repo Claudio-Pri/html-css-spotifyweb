@@ -273,6 +273,8 @@ main header>a {
     color: white;
     border: 1px solid white;
     border-radius: 50px;
+    transition: scale 0.1s linear;
+
 
 }
 
@@ -486,6 +488,10 @@ aside #aside-bottom>div:first-of-type>a:hover {
     color: white;
 
 
+}
+
+#upper>main>header>a:hover {
+    scale: 1.1;
 }
 
 

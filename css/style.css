@@ -10,7 +10,7 @@
 html {
     font-family: "Mukta", sans-serif;
     scroll-behavior: smooth;
-    overflow: hidden;
+
 }
 
 /* 
@@ -57,7 +57,8 @@ img {
 
 #upper>aside {
     width: var(--aside-width);
-    padding: 15px;
+    background-color: black;
+
 }
 
 #upper>main {
@@ -72,109 +73,150 @@ img {
 
 #lower {
     height: var(--lower-height);
+    width: 100%;
     display: flex;
     justify-content: space-between;
     background-color: #282828;
+    position: absolute;
+    z-index: 1;
+
 }
 
 /* SIDE-NAV */
+aside {
+    min-height: 300px;
 
-
-
-#upper .side-nav .main-logo a {
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
 }
 
-#upper .side-nav .main-logo img {
-    height: 40px;
+aside #aside-top {
+    /* altezza */
+}
+
+aside #aside-top .logo-container {
+    padding: 10px 5px;
 
 }
 
-.side-nav ul:first-of-type>li:first-of-type a {
-    color: white;
+
+aside #aside-top .logo-container img {
+    height: 30px;
 
 }
 
-.side-nav ul {
+aside #aside-top .logo-container .logo-mobile {
+    text-align: center;
+    display: none;
+}
+
+aside #aside-top nav ul {
     list-style: none;
-
 }
 
-
-.side-nav .nav-add-playlist li i {
-    margin-right: 10px;
-
-
-}
-
-.nav-playlist-container .nav-add-playlist li a {
-
+aside #aside-top nav ul li a {
+    display: inline-block;
+    text-decoration: none;
     color: gray;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+}
+
+aside #aside-top nav ul li a img {
+    height: 25px;
+    margin-right: 5px;
+    filter: brightness(50%);
+    /* da cambiare in hover */
+}
+
+aside #aside-middle {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    overflow: hidden;
+}
+
+aside #aside-middle ul {
+    overflow-y: auto;
+    flex-grow: 1;
+}
+
+aside #aside-middle>h4 {
+    text-transform: uppercase;
+}
+
+aside #aside-middle>div>button {
+    background: none;
+    border: none;
+    color: gray;
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+}
+
+aside #aside-middle>div>button>i {
+    margin-right: 5px;
+}
+
+aside #aside-middle>ul>li>a {
+    display: inline-block;
+    color: gray;
+    text-decoration: none;
+}
+
+aside #aside-bottom {
+    /* altezza */
+}
+
+aside #aside-bottom>div a {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    padding: 5px;
 
 }
 
+aside #aside-bottom>div:first-of-type {
+    margin: 0 10px;
 
-.side-nav ul li a img {
+}
+
+aside #aside-bottom>div:first-of-type>a {
+    display: inline-block;
+    text-decoration: none;
+    color: gray;
+    padding: 5px;
+    font-size: 0.7rem;
+}
+
+aside #aside-bottom>div:last-of-type>a {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+
+}
+
+aside #aside-bottom>div:last-of-type>a>img {
+    height: 30px;
     width: 30px;
-}
-
-.side-nav ul li a {
-    color: gray;
-    font-weight: bold;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    padding: 5px;
-
-}
-
-/* NAV PLAYLIST---DA RIVEDERE */
-.side-nav.desktop-nav .nav-playlist>ul>li>a {
-    color: gray;
-    font-weight: bold;
-    text-decoration: none;
-    padding: 5px;
-
-}
-
-.side-nav.desktop-nav a {
-    color: gray;
-    font-weight: bold;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    padding: 5px;
-
-}
-
-
-.side-nav.desktop-nav>a>i {
-
+    border-radius: 50%;
+    background-color: gray;
     margin-right: 5px;
 
-
 }
 
-.side-nav.desktop-nav>h4 {
+aside #aside-bottom>* {
     padding: 5px;
-    text-transform: uppercase;
-
-
 }
 
-
-
-/* .side-nav .nav-playlist-name a {
-    color: grey;
+aside #aside-bottom> :first-child {
+    border-bottom: 1px solid gray;
 }
-
-.side-nav .nav-playlist-container.row {
-    flex-direction: column;
-    max-height: 400px;
-    
-
-} */
-
 
 /* /SIDE-NAV */
 
@@ -325,6 +367,7 @@ main header>a {
     background-color: white;
     margin: 0 10px;
 
+    /* flex grow 1 sulla barra alposto del dimensionamento */
 
 
 }
@@ -383,14 +426,31 @@ main header>a {
         --aside-width: 50px;
     }
 
-    /* #upper>aside {
-        width: 50px;
+    aside #aside-middle>* {
+        display: none;
     }
 
-    #upper>main {
-        width: calc(100% - 50px);
-        overflow-y: auto;
-    } */
+    aside #aside-top .logo-container .logo-desktop {
+        display: none;
+    }
+
+    aside #aside-top .logo-container .logo-mobile {
+        display: block;
+    }
+
+    aside #aside-top nav ul li a>span {
+        display: none;
+    }
+
+    aside #aside-top nav ul li a img {
+        margin: 0 auto;
+    }
+
+    aside #aside-bottom>div a>span {
+        display: none;
+    }
+
+
 }
 
 /* effects */
@@ -407,9 +467,25 @@ main header>a {
     background-color: lightcoral;
 }
 
-.debug #upper>aside {
+/* .debug #upper>aside {
     background-color: lightgreen;
 }
+
+.debug #aside-top {
+    background-color: darkcyan;
+}
+
+.debug #aside-middle {
+    background-color: lightcoral;
+}
+
+.debug #aside-middle ul {
+    background-color: antiquewhite;
+}
+
+.debug #aside-bottom {
+    background-color: darkred;
+} */
 
 /* .debug #upper>main {
     background-color: burlywood;

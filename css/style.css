@@ -454,12 +454,48 @@ main header>a {
 }
 
 /* effects */
+aside #aside-top nav ul li a:hover {
+
+    color: white;
+
+}
+
+aside #aside-top nav ul li a:hover>img {
+
+    filter: brightness(100%);
+
+}
+
+aside #aside-middle>div>button:hover {
+
+    color: white;
+
+}
+
+aside #aside-middle>ul>li>a:hover {
+
+    color: white;
+
+}
+
+aside #aside-bottom>div:first-of-type>a:hover {
+
+    color: white;
+
+}
 
 #lower .footer-left>div>a:hover {
     color: white;
     text-decoration: underline;
 
 }
+
+#upper>main nav>ul>li>a:hover {
+    color: white;
+
+
+}
+
 
 /* DEBUG */
 

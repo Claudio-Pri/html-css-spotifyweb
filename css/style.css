@@ -288,6 +288,7 @@ main header>a {
     justify-content: space-between;
     align-items: center;
 
+
 }
 
 #lower .footer-left>* {
@@ -314,8 +315,9 @@ main header>a {
 
 }
 
-#middle-top {
-    padding: 10px 0;
+
+#lower .footer-middle {
+    width: 25%;
 
 }
 
@@ -325,15 +327,10 @@ main header>a {
 }
 
 
-#lower .footer-middle>div:first-of-type {
-    height: 50%;
-
-
-}
 
 #middle-top {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     padding: 5px 0;
 
@@ -341,12 +338,10 @@ main header>a {
 }
 
 #middle-top>* {
-
-    margin: 0 10px;
-
-
+    padding: 5px 10px;
 
 }
+
 
 #middle-bottom {
 
@@ -363,7 +358,8 @@ main header>a {
     display: flex;
     justify-content: flex-end;
     height: 3px;
-    min-width: 150px;
+    flex-grow: 1;
+
     background-color: white;
     margin: 0 10px;
 
@@ -387,19 +383,15 @@ main header>a {
 .footer-right {
     display: flex;
     align-items: center;
+
+    width: 20%;
 }
 
 .footer-right>* {
     margin: 0 10px;
 }
 
-.footer-right .play-bar {
-    width: 70px;
 
-
-
-
-}
 
 
 

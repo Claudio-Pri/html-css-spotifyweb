@@ -90,9 +90,6 @@ aside {
     flex-direction: column;
 }
 
-aside #aside-top {
-    /* altezza */
-}
 
 aside #aside-top .logo-container {
     padding: 10px 5px;
@@ -166,9 +163,6 @@ aside #aside-middle>ul>li>a {
     text-decoration: none;
 }
 
-aside #aside-bottom {
-    /* altezza */
-}
 
 aside #aside-bottom>div a {
     display: inline-block;
@@ -249,28 +243,36 @@ aside #aside-bottom> :first-child {
 }
 
 main .container .row .col {
-    position: relative;
+
     display: flex;
     flex-direction: column;
 }
 
+
+.img-container {
+    position: relative;
+}
+
 #overlay {
     position: absolute;
-    display: none;
-
-
-    /* accrocco--non funziona */
-    width: 100%;
-    height: 100%;
-    flex-grow: 1;
-
-
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     top: 0;
     left: 0;
+    right: 0;
+    bottom: 0;
     color: gray;
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 1;
-    vertical-align: middle;
+
+
+}
+
+#overlay.round-image {
+    border-radius: 50%;
+
 
 }
 
@@ -474,7 +476,7 @@ main header>a {
 /* effects */
 
 main>.container>.row>.col:hover #overlay {
-    display: block;
+    opacity: 1;
 }
 
 aside #aside-top nav ul li a:hover {
@@ -526,9 +528,9 @@ aside #aside-bottom>div:first-of-type>a:hover {
 
 /* DEBUG */
 
-.debug #upper {
+/* .debug #upper {
     background-color: lightcoral;
-}
+} */
 
 /* .debug #upper>aside {
     background-color: lightgreen;
